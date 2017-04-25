@@ -1,0 +1,28 @@
+<!doctype html>
+<html data-ng-app>
+    <head>
+        <title>Angular Js Directives</title>
+    </head>
+    
+    <!-- ng-repeat-->
+    
+    <body data-ng-init="people=[{name: 'John', city: 'New York'}, {name: 'Sam', city: 'New York'},{name: 'David', city: 'Chicago'}]">
+        
+        <h3>Data Repeat:</h3>
+        <ul>
+            <li data-ng-repeat="person in people">{{ person.name + ' '+ person.city  }}</li>
+        </ul>
+        
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+            <tr data-ng-repeat="person in people">
+                <td>{{person.name}}</td>
+                <td>{{person.city}}</td>
+        </table>
+    </body>
+    
+    <script src="../script/angular.js"></script>
+</html>

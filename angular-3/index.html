@@ -1,0 +1,26 @@
+<!doctype html>
+<html data-ng-app>
+    <head>
+        <title>Angular Js Directives</title>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+    </head>
+    
+    <!-- ng-cloak, ng-switch, ng-class, ng-show-->
+    
+    <body data-ng-init="data={name:'Gopi', isVisible:true, loggedIn: false, status: 'red'}">
+        
+        <div data-ng-cloak>
+            <div data-ng-switch on="data.loggedIn">
+            <div data-ng-switch-when="true">
+                Welcome {{ data.name }}
+            </div>
+            <div data-ng-switch-default data-ng-class="data.status">Login</div>
+                </div>
+        </div>
+        <div data-ng-show="data.isVisible">
+            Name: <input type="text" data-ng-model="data.name"/>{{data.name}}
+        </div>
+    </body>
+    
+    <script src="../script/angular.js"></script>
+</html>

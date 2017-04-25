@@ -1,0 +1,18 @@
+<!doctype html>
+<html data-ng-app>
+    <head>
+        <title>
+        Angular JS
+        </title>
+    </head>
+    <body data-ng-init="name='Gopiraj'">
+        <div data-ng-hide="isHidden">
+        Name: <input type="text"  data-ng-model="name"/> {{name}}
+        </div>
+        <div>
+        Hide: <input type="checkbox" data-ng-model="isHidden"/>
+        </div>
+        <button data-ng-click="name='Meenraj'">Change Name</button>
+        <script src="../script/angular.js"></script>
+    </body>
+</html>
