@@ -5,13 +5,24 @@
     <link href="styles/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <header>
+    <nav>
+        <ul>
+            <li><a href="#!/customers">Customer</a></li>
+            <li><a href="#!/orders">Orders</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
     <div ng-view></div>
+     </main>
     <script src="scripts/angular.js"></script>
     <script src="scripts/angular-route.js"></script>
     <script src="app/app.js"></script>
     <script src="app/services/customerFactory.js"></script>
     <script src="app/controllers/customersController.js"></script>
     <script src="app/controllers/ordersController.js"></script>
+    <script src="app/controllers/allordersController.js"></script>
     <script src="app/services/customerService.js"></script>
     <script src="app/services/values.js"></script>
     

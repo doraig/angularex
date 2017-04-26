@@ -6,7 +6,12 @@
         $scope.customers = [];
         $scope.appSettings = appSettings;
         function init() {
-            $scope.customers = customerFactory.getCustomers();
+             customerFactory.getCustomers()
+                 .then(function({data}) {
+                    $scope.customers = data;
+                 }, function(data, status, header, config) {
+                //error handelling
+                  });
         }
         init();
         $scope.doSort = function(propName) {

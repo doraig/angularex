@@ -5,7 +5,13 @@
         $scope.customer = null;
         
         function init() {
-            $scope.customer = customerFactory.getCustomer(customerId);
+            customerFactory.getCustomer(customerId)
+                .then(function({data}) {
+                    $scope.customer = data;
+                    },function (data, status, header, config) {
+                        //to do errors.
+                    }
+                    );
             
         }
         
